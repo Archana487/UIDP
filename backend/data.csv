@@ -1,0 +1,101 @@
+asset_id	asset_name	asset_type	area	ward_no	installation_date	condition_status	last_maintenance_date	responsible_department
+1	Park - RS Puram 1	Public Facility	RS Puram	4	03-12-2005	Good	04-07-2009	Coimbatore Corporation
+2	Saravanampatti Main Road 2	Road	Saravanampatti	73	10-11-2013	Poor	23-01-2015	Coimbatore Corporation
+3	Ganapathy Main Road 3	Road	Ganapathy	44	26-11-2015	Moderate	12-08-2019	Public Works Department
+4	Podanur Water Pipeline 4	Water Utility	Podanur	48	12-05-2006	Poor	15-07-2006	Public Works Department
+5	Park - Saibaba Colony 5	Public Facility	Saibaba Colony	24	14-10-2019	Poor	18-07-2020	TWAD Board
+6	RS Puram Water Pipeline 6	Water Utility	RS Puram	50	29-06-2016	Poor	27-01-2017	TWAD Board
+7	Podanur Main Road 7	Road	Podanur	34	03-11-2024	Good	06-10-2026	Coimbatore Corporation
+8	School - Kalapatti 8	Public Facility	Kalapatti	56	28-03-2024	Moderate	19-05-2025	TWAD Board
+9	School - Kalapatti 9	Public Facility	Kalapatti	81	20-12-2021	Poor	07-11-2025	Coimbatore Corporation
+10	Kuniamuthur Main Road 10	Road	Kuniamuthur	13	28-09-2008	Moderate	27-12-2008	TWAD Board
+11	Park - Ganapathy 11	Public Facility	Ganapathy	70	11-07-2024	Good	01-01-2026	Coimbatore Corporation
+12	Hospital - Ganapathy 12	Public Facility	Ganapathy	60	28-02-2023	Moderate	21-03-2024	TWAD Board
+13	Park - Race Course 13	Public Facility	Race Course	93	24-10-2022	Good	14-01-2026	Public Works Department
+14	Saravanampatti Main Road 14	Road	Saravanampatti	56	31-10-2012	Poor	24-10-2015	Public Works Department
+15	Saibaba Colony Water Pipeline 15	Water Utility	Saibaba Colony	75	28-10-2011	Poor	19-10-2015	Coimbatore Corporation
+16	Kalapatti Main Road 16	Road	Kalapatti	86	12-07-2004	Moderate	04-01-2008	Coimbatore Corporation
+17	Race Course Main Road 17	Road	Race Course	70	14-01-2009	Moderate	03-11-2012	Coimbatore Corporation
+18	Saibaba Colony Main Road 18	Road	Saibaba Colony	76	25-06-2022	Good	16-06-2025	TWAD Board
+19	Park - Thudiyalur 19	Public Facility	Thudiyalur	15	07-04-2007	Good	13-08-2007	Coimbatore Corporation
+20	Hospital - Kuniamuthur 20	Public Facility	Kuniamuthur	89	25-02-2019	Poor	26-05-2022	Coimbatore Corporation
+21	RS Puram Main Road 21	Road	RS Puram	32	18-09-2008	Good	22-12-2009	Coimbatore Corporation
+22	Singanallur Water Pipeline 22	Water Utility	Singanallur	93	26-11-2010	Poor	29-07-2014	TWAD Board
+23	Hospital - Peelamedu 23	Public Facility	Peelamedu	40	21-11-2019	Poor	17-06-2023	TWAD Board
+24	School - Saravanampatti 24	Public Facility	Saravanampatti	3	24-12-2007	Good	26-10-2010	TWAD Board
+25	Ganapathy Main Road 25	Road	Ganapathy	92	08-03-2021	Good	23-03-2024	Public Works Department
+26	Singanallur Water Pipeline 26	Water Utility	Singanallur	44	29-08-2023	Poor	21-08-2025	Coimbatore Corporation
+27	Kalapatti Main Road 27	Road	Kalapatti	47	24-04-2022	Good	17-01-2025	Coimbatore Corporation
+28	Hospital - Sundarapuram 28	Public Facility	Sundarapuram	38	18-10-2022	Poor	02-05-2023	TWAD Board
+29	Park - Singanallur 29	Public Facility	Singanallur	5	21-04-2020	Moderate	30-03-2022	TWAD Board
+30	Saravanampatti Water Pipeline 30	Water Utility	Saravanampatti	58	08-05-2013	Good	31-12-2016	TWAD Board
+31	Kuniamuthur Water Pipeline 31	Water Utility	Kuniamuthur	32	10-11-2015	Good	24-08-2019	TWAD Board
+32	Thudiyalur Water Pipeline 32	Water Utility	Thudiyalur	61	21-11-2004	Good	20-11-2008	Public Works Department
+33	School - Gandhipuram 33	Public Facility	Gandhipuram	66	22-10-2010	Moderate	18-03-2012	Public Works Department
+34	Ganapathy Main Road 34	Road	Ganapathy	72	28-09-2009	Good	18-02-2011	Public Works Department
+35	Race Course Main Road 35	Road	Race Course	48	11-07-2005	Poor	26-11-2006	Public Works Department
+36	Saravanampatti Main Road 36	Road	Saravanampatti	89	25-05-2012	Moderate	09-06-2016	Coimbatore Corporation
+37	Kalapatti Main Road 37	Road	Kalapatti	15	06-01-2014	Moderate	26-07-2014	Public Works Department
+38	School - Podanur 38	Public Facility	Podanur	75	29-01-2005	Good	20-12-2006	Coimbatore Corporation
+39	Podanur Water Pipeline 39	Water Utility	Podanur	86	24-08-2016	Moderate	24-02-2018	Coimbatore Corporation
+40	School - Kuniamuthur 40	Public Facility	Kuniamuthur	20	11-08-2008	Good	16-10-2010	Public Works Department
+41	RS Puram Main Road 41	Road	RS Puram	98	10-01-2021	Moderate	13-07-2022	Coimbatore Corporation
+42	School - Ukkadam 42	Public Facility	Ukkadam	53	30-11-2016	Moderate	07-06-2019	TWAD Board
+43	Ukkadam Main Road 43	Road	Ukkadam	30	25-11-2010	Moderate	28-07-2011	Coimbatore Corporation
+44	Kuniamuthur Main Road 44	Road	Kuniamuthur	72	12-08-2016	Moderate	15-01-2020	TWAD Board
+45	Gandhipuram Water Pipeline 45	Water Utility	Gandhipuram	38	11-04-2008	Poor	26-12-2010	TWAD Board
+46	RS Puram Water Pipeline 46	Water Utility	RS Puram	2	27-08-2020	Poor	29-03-2022	TWAD Board
+47	Ukkadam Main Road 47	Road	Ukkadam	20	15-11-2023	Good	24-08-2026	Coimbatore Corporation
+48	School - Saibaba Colony 48	Public Facility	Saibaba Colony	12	09-04-2005	Good	19-04-2008	TWAD Board
+49	Ganapathy Main Road 49	Road	Ganapathy	68	11-01-2016	Good	27-06-2017	Coimbatore Corporation
+50	Kalapatti Water Pipeline 50	Water Utility	Kalapatti	72	17-01-2022	Poor	10-09-2024	Public Works Department
+51	Hospital - Thudiyalur 51	Public Facility	Thudiyalur	37	10-10-2012	Moderate	18-07-2013	TWAD Board
+52	Ukkadam Water Pipeline 52	Water Utility	Ukkadam	43	18-11-2010	Poor	13-11-2014	Public Works Department
+53	Sundarapuram Main Road 53	Road	Sundarapuram	43	15-10-2021	Moderate	02-03-2025	TWAD Board
+54	Saravanampatti Water Pipeline 54	Water Utility	Saravanampatti	54	14-04-2015	Poor	06-07-2018	TWAD Board
+55	Kalapatti Main Road 55	Road	Kalapatti	71	01-12-2012	Moderate	27-07-2014	TWAD Board
+56	Hospital - Kalapatti 56	Public Facility	Kalapatti	96	31-03-2006	Moderate	03-02-2008	TWAD Board
+57	RS Puram Water Pipeline 57	Water Utility	RS Puram	72	17-10-2014	Poor	04-07-2016	Coimbatore Corporation
+58	RS Puram Water Pipeline 58	Water Utility	RS Puram	51	07-02-2019	Good	15-02-2022	Public Works Department
+59	Sundarapuram Main Road 59	Road	Sundarapuram	24	14-07-2020	Poor	08-07-2021	Public Works Department
+60	Saibaba Colony Water Pipeline 60	Water Utility	Saibaba Colony	68	08-07-2005	Good	21-08-2005	Coimbatore Corporation
+61	Hospital - RS Puram 61	Public Facility	RS Puram	12	02-01-2015	Moderate	21-11-2018	Coimbatore Corporation
+62	Hospital - Podanur 62	Public Facility	Podanur	86	02-07-2023	Moderate	09-08-2025	Public Works Department
+63	Hospital - Kalapatti 63	Public Facility	Kalapatti	8	21-01-2013	Good	19-09-2016	Coimbatore Corporation
+64	Podanur Water Pipeline 64	Water Utility	Podanur	25	13-10-2015	Poor	20-04-2017	Coimbatore Corporation
+65	Park - Ukkadam 65	Public Facility	Ukkadam	40	09-03-2013	Poor	09-10-2015	Public Works Department
+66	Singanallur Main Road 66	Road	Singanallur	51	22-04-2012	Moderate	04-12-2014	Coimbatore Corporation
+67	Ganapathy Main Road 67	Road	Ganapathy	80	03-10-2018	Good	07-05-2022	TWAD Board
+68	Thudiyalur Water Pipeline 68	Water Utility	Thudiyalur	9	03-12-2006	Poor	13-01-2007	Coimbatore Corporation
+69	Gandhipuram Water Pipeline 69	Water Utility	Gandhipuram	59	06-11-2004	Moderate	15-07-2005	Coimbatore Corporation
+70	Ukkadam Water Pipeline 70	Water Utility	Ukkadam	73	08-01-2023	Good	21-07-2023	Coimbatore Corporation
+71	School - Gandhipuram 71	Public Facility	Gandhipuram	88	04-05-2024	Moderate	15-06-2024	Public Works Department
+72	Kovaipudur Main Road 72	Road	Kovaipudur	76	09-02-2011	Good	21-09-2011	Public Works Department
+73	Hospital - Gandhipuram 73	Public Facility	Gandhipuram	77	01-06-2012	Moderate	21-07-2012	TWAD Board
+74	Park - Podanur 74	Public Facility	Podanur	2	20-02-2021	Poor	25-08-2021	Coimbatore Corporation
+75	RS Puram Main Road 75	Road	RS Puram	91	10-04-2023	Moderate	20-06-2023	TWAD Board
+76	Kuniamuthur Water Pipeline 76	Water Utility	Kuniamuthur	42	05-04-2019	Moderate	05-10-2020	Coimbatore Corporation
+77	Hospital - Saibaba Colony 77	Public Facility	Saibaba Colony	51	04-09-2009	Moderate	04-03-2013	TWAD Board
+78	Sundarapuram Main Road 78	Road	Sundarapuram	62	18-10-2021	Poor	26-09-2022	Public Works Department
+79	Gandhipuram Main Road 79	Road	Gandhipuram	50	03-09-2018	Moderate	03-09-2020	Public Works Department
+80	Kalapatti Water Pipeline 80	Water Utility	Kalapatti	25	15-06-2022	Moderate	10-10-2024	Public Works Department
+81	Park - Kovaipudur 81	Public Facility	Kovaipudur	24	04-01-2023	Good	14-04-2026	Coimbatore Corporation
+82	Gandhipuram Main Road 82	Road	Gandhipuram	21	01-04-2018	Poor	12-01-2021	TWAD Board
+83	Kalapatti Main Road 83	Road	Kalapatti	30	09-04-2012	Moderate	21-01-2013	Coimbatore Corporation
+84	Saibaba Colony Water Pipeline 84	Water Utility	Saibaba Colony	34	15-12-2020	Good	08-12-2024	TWAD Board
+85	Kovaipudur Main Road 85	Road	Kovaipudur	37	28-06-2021	Moderate	16-05-2024	Coimbatore Corporation
+86	School - Peelamedu 86	Public Facility	Peelamedu	6	13-12-2006	Moderate	16-12-2008	Public Works Department
+87	Saibaba Colony Water Pipeline 87	Water Utility	Saibaba Colony	12	08-01-2024	Poor	04-07-2026	TWAD Board
+88	Ganapathy Main Road 88	Road	Ganapathy	26	24-05-2024	Poor	12-02-2026	Public Works Department
+89	Hospital - Saibaba Colony 89	Public Facility	Saibaba Colony	93	06-06-2004	Moderate	26-03-2005	TWAD Board
+90	School - Peelamedu 90	Public Facility	Peelamedu	50	24-04-2010	Poor	11-11-2012	Coimbatore Corporation
+91	Race Course Main Road 91	Road	Race Course	19	14-09-2008	Moderate	22-09-2011	Coimbatore Corporation
+92	Podanur Main Road 92	Road	Podanur	76	29-10-2012	Moderate	18-12-2013	Public Works Department
+93	Singanallur Water Pipeline 93	Water Utility	Singanallur	100	11-10-2010	Poor	09-10-2012	Public Works Department
+94	Hospital - Gandhipuram 94	Public Facility	Gandhipuram	74	29-03-2023	Poor	08-02-2025	Public Works Department
+95	Hospital - Kalapatti 95	Public Facility	Kalapatti	4	17-01-2011	Good	05-12-2011	Public Works Department
+96	Gandhipuram Water Pipeline 96	Water Utility	Gandhipuram	56	05-10-2013	Moderate	12-12-2014	Coimbatore Corporation
+97	Thudiyalur Main Road 97	Road	Thudiyalur	66	22-12-2007	Poor	28-03-2010	TWAD Board
+98	Park - Gandhipuram 98	Public Facility	Gandhipuram	92	24-09-2013	Good	11-03-2017	TWAD Board
+99	Hospital - RS Puram 99	Public Facility	RS Puram	29	31-12-2022	Moderate	15-03-2026	Public Works Department
+100	School - Race Course 100	Public Facility	Race Course	93	29-10-2023	Moderate	06-01-2025	Coimbatore Corporation
