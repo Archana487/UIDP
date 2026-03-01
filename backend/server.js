@@ -39,10 +39,48 @@ const initializeDatabase = async () => {
         const check = await db.get('SELECT COUNT(*) as count FROM infrastructure_assets');
 
         if (check.row && check.row.count === 0) {
-            console.log('Adding initial data set (fallback seed)...');
-            // Basic fallback data inside server.js to guarantee the DB is usable
+            console.log('Adding initial data set (from data.csv)...');
+
+            // Create default admin
             await db.run("INSERT INTO users (username, password, role) VALUES ('admin', 'password', 'admin')");
             console.log('Initial admin user created.');
+
+            // Load CSV Data
+            const csvPath = path.join(__dirname, 'data.csv');
+            if (fs.existsSync(csvPath)) {
+                const content = fs.readFileSync(csvPath, 'utf8');
+                const lines = content.split('\n').filter(l => l.trim());
+                const headers = lines[0].split('\t').map(h => h.trim());
+
+                let count = 0;
+                for (let i = 1; i < lines.length; i++) {
+                    const cols = lines[i].split('\t').map(c => c.trim());
+                    if (cols.length < headers.length) continue;
+
+                    const row = {};
+                    headers.forEach((h, idx) => { row[h] = cols[idx]; });
+
+                    await db.run(
+                        `INSERT INTO infrastructure_assets 
+                         (asset_name, asset_type, location, ward_no, installation_date, condition_status, last_maintenance_date, responsible_department)
+                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+                        [
+                            row['asset_name'],
+                            row['asset_type'],
+                            row['location'],
+                            parseInt(row['ward_no']) || 1,
+                            row['installation_date'],
+                            row['condition_status'],
+                            row['last_maintenance_date'],
+                            row['responsible_department']
+                        ]
+                    );
+                    count++;
+                }
+                console.log(`✅ ${count} records loaded from data.csv successfully.`);
+            } else {
+                console.warn('⚠️ data.csv not found. Skipping infrastructure data seed.');
+            }
         }
 
         console.log('Database initialized successfully.');
