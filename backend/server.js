@@ -65,14 +65,14 @@ const initializeDatabase = async () => {
                          (asset_name, asset_type, location, ward_no, installation_date, condition_status, last_maintenance_date, responsible_department)
                          VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
                         [
-                            row['asset_name'],
-                            row['asset_type'],
-                            row['location'],
+                            row['asset_name'] || 'Unknown Asset',
+                            row['asset_type'] || 'Other',
+                            row['location'] || 'Unknown Location',
                             parseInt(row['ward_no']) || 1,
-                            row['installation_date'],
-                            row['condition_status'],
-                            row['last_maintenance_date'],
-                            row['responsible_department']
+                            row['installation_date'] || '2020-01-01',
+                            row['condition_status'] || 'Good',
+                            row['last_maintenance_date'] || null,
+                            row['responsible_department'] || 'General Maintenance'
                         ]
                     );
                     count++;
