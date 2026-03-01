@@ -35,18 +35,19 @@ const initializeDatabase = async () => {
         const schemaCode = fs.readFileSync(schemaPath, 'utf8');
         await db.exec(schemaCode);
 
-        console.log('Checking for missing data...');
+        // Always ensure default admin exists — safe even if it already exists
+        await db.run(
+            "INSERT OR IGNORE INTO users (username, password, role) VALUES ('admin', 'password', 'admin')"
+        );
+        console.log('Admin account ensured.');
+
+        // Seed infrastructure data only when the table is empty
+        console.log('Checking for infrastructure data...');
         const check = await db.get('SELECT COUNT(*) as count FROM infrastructure_assets');
-
         const rowCount = check.row ? (check.row.count ?? check.row['COUNT(*)'] ?? 0) : 0;
+
         if (rowCount === 0) {
-            console.log('Adding initial data set (from data.csv)...');
-
-            // Create default admin
-            await db.run("INSERT INTO users (username, password, role) VALUES ('admin', 'password', 'admin')");
-            console.log('Initial admin user created.');
-
-            // Load CSV Data
+            console.log('Seeding infrastructure data from data.csv...');
             const csvPath = path.join(__dirname, 'data.csv');
             if (fs.existsSync(csvPath)) {
                 const content = fs.readFileSync(csvPath, 'utf8');
