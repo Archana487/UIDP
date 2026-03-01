@@ -66,8 +66,8 @@ const authController = {
                 }
             });
         } catch (err) {
-            console.error('Auth error:', err);
-            res.status(500).json({ message: 'Internal server error' });
+            console.error('Login error:', err);
+            res.status(500).json({ message: 'Internal server error', error: err.message, stack: err.stack });
         }
     }
 };
