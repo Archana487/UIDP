@@ -38,7 +38,8 @@ const initializeDatabase = async () => {
         console.log('Checking for missing data...');
         const check = await db.get('SELECT COUNT(*) as count FROM infrastructure_assets');
 
-        if (check.row && check.row.count === 0) {
+        const rowCount = check.row ? (check.row.count ?? check.row['COUNT(*)'] ?? 0) : 0;
+        if (rowCount === 0) {
             console.log('Adding initial data set (from data.csv)...');
 
             // Create default admin
