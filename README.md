@@ -1,76 +1,55 @@
-# Urban Infrastructure Data Portal – Smart City Management System
+# Smart City Management Intelligence Portal
 
-A production-ready management system for city infrastructure assets, built with Node.js, React, and PostgreSQL.
+This repository contains the complete frontend and backend source code for the Smart City Management dashboard. It is designed to act as a centralized hub for managing city infrastructure and handling citizen complaints securely.
 
-## 🚀 Features
-- **Dashboard**: High-level overview with charts (Assets by Type, Asset Health).
-- **Asset Management**: Full CRUD operations for roads, utilities, and facilities.
-- **Maintenance Tracking**: Log maintenance events, costs, and auto-update asset condition.
-- **Reports**: Advanced filtering by Ward, Type, and Condition.
-- **Modern UI**: Built with Tailwind CSS, Lucide icons, and Framer Motion for a premium feel.
+## Tech Stack Overview
 
-## 🛠️ Technology Stack
-- **Frontend**: React.js, Tailwind CSS, Chart.js, Axios.
-- **Backend**: Node.js, Express.js, PostgreSQL (pg-pool).
-- **Icons**: Lucide React.
+### Frontend (Client Application)
+*   **Core Framework**: React (via Vite)
+*   **Styling**: Tailwind CSS
+*   **Design Typography**: Outfit (Google Fonts)
+*   **Iconography**: Lucide-React
+*   **Animations**: Framer Motion
+*   **Routing & State**: React Hooks (`useState`, `useEffect`)
 
-## 📋 Prerequisites
-- Node.js (v16+)
-- PostgreSQL installed and running.
+### Backend (Server API)
+*   **Runtime Environment**: Node.js
+*   **Server Framework**: Express.js
+*   **Database**: SQLite (local serverless flat-file DB for extreme portability)
+*   **Middleware**: CORS, Body-Parser
 
-## ⚙️ Setup Instructions
+## Proposed Solution Breakdown
 
-### 1. Database Setup
-1. Create a database named `smart_city_db` in PostgreSQL.
-2. Run the SQL schema found in `backend/schema.sql`.
-   ```bash
-   psql -U postgres -d smart_city_db -f backend/schema.sql
-   ```
+### 1. Dual-Role Architecture (Role-Based Access Control)
+The application dynamically alters its UI and available tools based on the authority level of the logged-in user:
+-   **Citizen View**: Focuses entirely on searching public infrastructure data, submitting geographical issue reports (e.g., Road Damage, Power Outages), and tracking the status of those specific reports under "My Reports".
+-   **Admin View**: Gains absolute CRUD (Create, Read, Update, Delete) privileges over all city assets. Has a unified dashboard to review all pending Citizen Reports and update their statuses to notify the public.
 
-### 2. Backend Setup
-1. Navigate to the backend directory:
+### 2. Streamlined Issue Pipeline
+-   **Inline Reporting**: Citizens do not have to navigate to a separate form to submit a complaint. Every infrastructure asset card contains an inline "Report" button, pre-linking the complaint to the exact geographical asset in the database.
+-   **Separation of State**: Reports start in the **"My Reports"** tab for the citizen. Once an admin acknowledges the issue and changes its status (In Progress, Resolved), it mathematically moves from the citizen's personal inbox into the public **"Maintenance Records"** permanent history log.
+
+### 3. Real-Time Admin Alerts
+-   **Asynchronous Polling**: The frontend securely queries the backend on an interval to detect new citizen reports.
+-   **Sidebar Badges & Toasts**: When a new issue arises, the Admin's sidebar immediately pulses a red unread badge next to the "Issue Tracker" and slides up an animated "NEW ISSUES WAS ARISE" toast alert, ensuring rapid city response times.
+
+### 4. Premium Aesthetic & UX
+-   **Glassmorphism Layout**: Deep space gradients mixed with translucent frosted-glass cards (via Tailwind's backdrop-blur) deliver a cutting-edge command center aesthetic.
+-   **Micro-Interactions**: Hover states, animated borders, and physics-based spring animations (via Framer Motion) provide satisfying, tactile feedback to every user action, heavily elevating the perceived quality of the portal.
+
+## Setup & Running Locally
+
+1. Clone the repository.
+2. In Terminal Window 1, navigate to `/backend`:
    ```bash
    cd backend
-   ```
-2. Create a `.env` file based on `.env.example`:
-   ```env
-   PORT=5000
-   DB_USER=postgres
-   DB_PASSWORD=your_password
-   DB_NAME=smart_city_db
-   DB_HOST=localhost
-   DB_PORT=5432
-   ```
-3. Install dependencies:
-   ```bash
    npm install
-   ```
-4. (Optional) Seed the database with 50 dummy records:
-   ```bash
-   node seed.js
-   ```
-5. Start the server:
-   ```bash
    npm start
    ```
-
-### 3. Frontend Setup
-1. Navigate to the frontend directory:
+3. In Terminal Window 2, navigate to `/frontend`:
    ```bash
    cd frontend
-   ```
-2. Install dependencies:
-   ```bash
    npm install
+   npm run dev
    ```
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-## 📂 Project Structure
-- `backend/`: Express API, Controllers, Routes, Models, and Seed script.
-- `frontend/`: React components, Pages, and Tailwind styles.
-
----
-Built as part of the Smart City Management Project.
+4. Access the portal at `http://localhost:5173`.
