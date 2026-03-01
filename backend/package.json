@@ -4,8 +4,8 @@
   "description": "Backend for Urban Infrastructure Data Portal",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "seed": "node seed.js"
+    "start": "node init_db.js && node seed_csv.js && node server.js",
+    "seed": "node seed_csv.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

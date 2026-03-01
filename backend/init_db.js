@@ -13,8 +13,10 @@ const initDB = async () => {
         await db.exec(schema);
 
         console.log('Database tables verified/created successfully.');
+        process.exit(0);
     } catch (err) {
         console.error('Error initializing database:', err);
+        process.exit(1);
     }
 };
 
