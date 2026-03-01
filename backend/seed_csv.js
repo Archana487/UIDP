@@ -9,6 +9,12 @@ const loadCSV = async () => {
 
         console.log('Reading data.csv...');
         const csvPath = path.join(__dirname, 'data.csv');
+
+        if (!fs.existsSync(csvPath)) {
+            console.warn('⚠️ data.csv not found. Skipping database seed process.');
+            process.exit(0);
+        }
+
         const content = fs.readFileSync(csvPath, 'utf8');
         const lines = content.split('\n').filter(l => l.trim());
         const headers = lines[0].split('\t').map(h => h.trim());
