@@ -35,6 +35,14 @@ const initializeDatabase = async () => {
         const schemaCode = fs.readFileSync(schemaPath, 'utf8');
         await db.exec(schemaCode);
 
+        // Safe migration: add reported_by column if it doesn't already exist
+        try {
+            await db.run("ALTER TABLE maintenance_records ADD COLUMN reported_by VARCHAR(255) DEFAULT 'admin'");
+            console.log('Migration: added reported_by column.');
+        } catch (_) {
+            // Column already exists — ignore the error
+        }
+
         // Always ensure default admin exists — safe even if it already exists
         await db.run(
             "INSERT OR IGNORE INTO users (username, password, role) VALUES ('admin', 'password', 'admin')"

@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS maintenance_records (
     maintenance_cost DECIMAL(12, 2) NOT NULL,
     remarks TEXT,
     image_data TEXT,
-    issue_status VARCHAR(50) DEFAULT 'Open'
+    issue_status VARCHAR(50) DEFAULT 'Open',
+    reported_by VARCHAR(255) DEFAULT 'admin'
 );
 
 -- Indexing for performance

@@ -1,28 +1,38 @@
 const db = require('../config/db');
 
-// Get all maintenance records
+// Get all maintenance records — filtered by username for citizens
 exports.getAllMaintenance = async (req, res) => {
     try {
-        const result = await db.query('SELECT * FROM maintenance_records ORDER BY maintenance_date DESC');
+        const { username } = req.query;
+        let query = 'SELECT * FROM maintenance_records';
+        let params = [];
+
+        if (username) {
+            query += ' WHERE reported_by = ?';
+            params.push(username);
+        }
+
+        query += ' ORDER BY maintenance_date DESC';
+        const result = await db.query(query, params);
         res.json(result.rows);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
 
-// Add maintenance record
+// Add maintenance record — store who reported it
 exports.addMaintenanceRecord = async (req, res) => {
-    const { asset_id, maintenance_date, maintenance_cost, remarks, new_status, image_data, issue_status } = req.body;
+    const { asset_id, maintenance_date, maintenance_cost, remarks, new_status, image_data, issue_status, reported_by } = req.body;
 
     try {
         await db.exec('BEGIN TRANSACTION');
 
         const result = await db.run(
-            'INSERT INTO maintenance_records (asset_id, maintenance_date, maintenance_cost, remarks, image_data, issue_status) VALUES (?, ?, ?, ?, ?, ?)',
-            [asset_id, maintenance_date, maintenance_cost, remarks, image_data || null, issue_status || 'Open']
+            'INSERT INTO maintenance_records (asset_id, maintenance_date, maintenance_cost, remarks, image_data, issue_status, reported_by) VALUES (?, ?, ?, ?, ?, ?, ?)',
+            [asset_id, maintenance_date, maintenance_cost, remarks, image_data || null, issue_status || 'Open', reported_by || 'admin']
         );
 
-        // Update the asset
+        // Update the asset condition
         await db.run(
             'UPDATE infrastructure_assets SET last_maintenance_date = ?, condition_status = ? WHERE asset_id = ?',
             [maintenance_date, new_status, asset_id]

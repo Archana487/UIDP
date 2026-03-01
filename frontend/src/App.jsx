@@ -49,7 +49,7 @@ function App() {
         dashboard: <Dashboard userRole={user.role} username={user.username} />,
         assets: <Dashboard userRole={user.role} username={user.username} forcedSection="assets" />,
         report: <Dashboard userRole={user.role} username={user.username} forcedSection="report" />,
-        maintenance: <Dashboard userRole={user.role} username={user.username} forcedSection="maintenance" />,
+        maintenance: <Maintenance username={user.username} userRole={user.role} />,
         issues: <Dashboard userRole={user.role} username={user.username} forcedSection="issues" />,
         create: <Dashboard userRole={user.role} username={user.username} forcedSection="create" />,
         reports: <Reports />

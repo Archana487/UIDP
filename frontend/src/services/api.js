@@ -21,7 +21,7 @@ export const assetService = {
 };
 
 export const maintenanceService = {
-    getAll: () => api.get('/maintenance'),
+    getAll: (username) => api.get('/maintenance', { params: username ? { username } : {} }),
     add: (data) => api.post('/maintenance', data),
     getHistory: (assetId) => api.get(`/maintenance/${assetId}`),
     updateStatus: (id, status) => api.put(`/maintenance/${id}/status`, { issue_status: status })
