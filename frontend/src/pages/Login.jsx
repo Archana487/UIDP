@@ -26,7 +26,11 @@ const Login = ({ onLogin }) => {
                 setIsLogin(true);
             }
         } catch (err) {
-            setError(err.response?.data?.message || 'Authentication failed. Please check your credentials.');
+            if (!err.response) {
+                setError('Cannot reach the server. Backend may be starting up — please wait 30 seconds and try again.');
+            } else {
+                setError(err.response?.data?.message || 'Authentication failed. Please check your credentials.');
+            }
         } finally {
             setLoading(false);
         }
